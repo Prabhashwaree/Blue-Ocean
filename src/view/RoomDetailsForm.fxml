@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="roomsDetailsPane" prefHeight="696.0" prefWidth="1176.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomDetailsFormController">
+   <children>
+      <ImageView fitHeight="377.0" fitWidth="489.0" layoutX="391.0" layoutY="35.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="101.0" layoutX="-9.0" stroke="BLACK" strokeType="INSIDE" width="1255.0" />
+      <ImageView fitHeight="53.0" fitWidth="85.0" layoutX="60.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelRoomDetails" layoutX="159.0" layoutY="8.0" prefHeight="71.0" prefWidth="447.0" text="Rooms Details" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="58.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="598.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" width="583.0" />
+      <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="22.0" layoutY="124.0" onAction="#backToHomeWindow" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: #0000ff;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="1114.0" layoutY="258.0" onAction="#saveUpdate" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: #008000;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="331.0" layoutY="183.0" onAction="#moveToRoomsType" prefHeight="25.0" prefWidth="139.0" promptText="Customer Id">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtRoomPrize" labelFloat="true" layoutX="326.0" layoutY="236.0" onAction="#moveRoomOffer" prefHeight="25.0" prefWidth="162.0" promptText="Room Prize">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtAddNewRoom" labelFloat="true" layoutX="129.0" layoutY="236.0" onAction="#moveRoomPrize" prefHeight="25.0" prefWidth="139.0" promptText="Add New Room">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtRoomType" labelFloat="true" layoutX="548.0" layoutY="183.0" onAction="#moveToRoomCount" prefHeight="25.0" prefWidth="155.0" promptText="Rooms Type">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtRoomCount" labelFloat="true" layoutX="774.0" layoutY="183.0" onAction="#moveToAddNewRoom" prefHeight="25.0" prefWidth="155.0" promptText="Rooms Count">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtRoomOffer" labelFloat="true" layoutX="545.0" layoutY="241.0" prefHeight="25.0" prefWidth="155.0" promptText="Modify Room">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <Label layoutX="614.0" layoutY="54.0" prefHeight="36.0" prefWidth="277.0" text="Add and Change Room Details Only Admin " textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="154.0" fitWidth="155.0" layoutX="945.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture80.PNG" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblRoomDetails" layoutY="319.0" prefHeight="377.0" prefWidth="1245.0">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="119.0" text="Date" />
+          <TableColumn fx:id="colId" prefWidth="137.0" text="Customer Id" />
+            <TableColumn fx:id="colType" prefWidth="168.0" text="Room Type" />
+            <TableColumn fx:id="colCount" prefWidth="177.0" text="Room Count" />
+            <TableColumn fx:id="colRoom" prefWidth="177.0" text="Add New Room" />
+            <TableColumn fx:id="colPrize" prefWidth="173.0" text="Room Prize" />
+            <TableColumn fx:id="colOffer" prefWidth="162.0" text="Modify Room" />
+            <TableColumn fx:id="colDelete" prefWidth="131.0" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtDate" labelFloat="true" layoutX="136.0" layoutY="183.0" onAction="#moveToCustomerId" prefHeight="25.0" prefWidth="131.0" promptText="Date">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <PasswordField layoutX="898.0" layoutY="56.0" prefHeight="25.0" prefWidth="248.0" promptText="  Enter Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

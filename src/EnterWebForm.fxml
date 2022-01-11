@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="openWindowFirst" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EnterWebFormController">
+   <children>
+      <ImageView fitHeight="347.0" fitWidth="572.0" layoutX="-12.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Capture.PNG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SCREEN" height="126.0" layoutX="203.0" layoutY="127.0" opacity="0.64" stroke="BLACK" strokeType="INSIDE" width="281.0">
+         <fill>
+            <LinearGradient endX="0.7095238095238094" endY="0.319047619047619" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="labelUserName" layoutX="219.0" layoutY="158.0" prefHeight="17.0" prefWidth="59.0" text="User Name">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPassword" layoutX="220.0" layoutY="194.0" prefHeight="17.0" prefWidth="59.0" text="Password">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="288.0" layoutY="158.0" prefHeight="4.0" prefWidth="177.0" style="-fx-background-color: #FFFFFF;">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" layoutX="288.0" layoutY="196.0" prefHeight="4.0" prefWidth="177.0" style="-fx-background-color: #FFFFFF;">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="createAccountBtn" buttonType="RAISED" layoutX="389.0" layoutY="222.0" onAction="#openInCreateAccount" prefHeight="19.0" prefWidth="76.0" style="-fx-background-color: #008000;" text="Create Account" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="loginBtn" buttonType="RAISED" layoutX="338.0" layoutY="222.0" onAction="#openInLoginWindo" prefHeight="17.0" prefWidth="48.0" style="-fx-background-color: #0000ff;" text="Login" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="blueOceanName" layoutX="3.0" layoutY="3.0" prefHeight="41.0" prefWidth="232.0" style="-fx-background-color: #FFFFFF;" text="Blue          cean Hotel">
+         <font>
+            <Font name="Arial Narrow" size="29.0" />
+         </font>
+      </Label>
+       <ImageView fitHeight="33.0" fitWidth="51.0" layoutX="68.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+           <Image url="@Capture.PNG" />
+       </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="50.0" layoutX="68.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Capture1.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

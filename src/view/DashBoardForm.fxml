@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="hotelManagementSystemPane" prefHeight="696.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="116.0" stroke="BLACK" strokeType="INSIDE" width="1177.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0004fc" height="61.0" layoutY="525.0" opacity="0.51" stroke="#d0aeae" strokeType="INSIDE" width="858.0" />
+      <Rectangle arcHeight="4.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutY="65.0" stroke="WHITE" strokeType="INSIDE" width="1176.0" />
+      <JFXButton fx:id="btnBookingDetails" buttonType="RAISED" layoutY="66.0" onAction="#openBookingDetails" prefHeight="37.0" prefWidth="288.0" style="-fx-background-color: #000000;" text="Booking Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRoomDetails" buttonType="RAISED" layoutX="290.0" layoutY="66.0" onAction="#openRoomDetails" prefHeight="37.0" prefWidth="307.0" style="-fx-background-color: #000000;" text="Rooms Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnMealsDetails" buttonType="RAISED" layoutX="599.0" layoutY="66.0" onAction="#openMealsDetails" prefHeight="37.0" prefWidth="288.0" style="-fx-background-color: #000000;" text="Meals Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnIncomeReportsDetails" buttonType="RAISED" layoutX="889.0" layoutY="66.0" onAction="#openIncomeReportsDetails" prefHeight="37.0" prefWidth="288.0" style="-fx-background-color: #000000;" text="Income Reports Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="44.0" fitWidth="62.0" layoutX="42.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelHotelManagementSystem" layoutX="110.0" layoutY="4.0" prefHeight="47.0" prefWidth="484.0" text="Hotel Management System" textFill="#a1d9ff">
+         <font>
+            <Font name="Bodoni MT Bold" size="43.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="403.0" fitWidth="1184.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic10.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="277.0" fitWidth="423.0" layoutX="1.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic90.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="14.0" layoutY="116.0" onAction="#backToWindow" prefHeight="39.0" prefWidth="116.0" style="-fx-background-color: #808080;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="277.0" fitWidth="415.0" layoutX="762.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic70.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="277.0" fitWidth="451.0" layoutX="411.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic%2040.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4891c9" height="3.0" layoutX="618.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="506.0" />
+   </children>
+</AnchorPane>

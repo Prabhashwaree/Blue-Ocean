@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="createYourOceanAccount" prefHeight="696.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateAccountFormController">
+   <children>
+      <ImageView fitHeight="679.0" fitWidth="1085.0" layoutX="148.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="381.0" fitWidth="538.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic12.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="342.0" fitWidth="786.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../master-bedroom-1.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SCREEN" fill="DODGERBLUE" height="583.0" layoutX="617.0" layoutY="55.0" opacity="0.85" stroke="#686868" strokeType="INSIDE" width="471.0" />
+      <ImageView fitHeight="52.0" fitWidth="73.0" layoutX="652.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelOceanAccount" layoutX="650.0" layoutY="136.0" prefHeight="60.0" prefWidth="441.0" text="Create Your Ocean Account">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFirstName" layoutX="650.0" layoutY="214.0" onAction="#moveToLastName" prefHeight="30.0" prefWidth="199.0" promptText="First name" style="-fx-alignment: #C0C0C0;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtLastName" layoutX="865.0" layoutY="214.0" onAction="#moveToUserName" prefHeight="30.0" prefWidth="199.0" promptText="Last name" style="-fx-alignment: #C0C0C0;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtUserName" layoutX="650.0" layoutY="311.0" onAction="#moveToPassword" prefHeight="30.0" prefWidth="412.0" promptText="Username                                                                     @gmail.com" style="-fx-alignment: #C0C0C0;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="btnShowPassword" layoutX="650.0" layoutY="466.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="23.0" prefWidth="199.0" text="Show Password" textFill="#403f3f">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="labelSignInInstead" layoutX="649.0" layoutY="511.0" prefHeight="30.0" prefWidth="183.0" text="Sigin in instead">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="974.0" layoutY="463.0" onAction="#nextWindowOpen" opacity="0.64" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #008000;" text="Next" textFill="WHITE" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="652.0" layoutY="566.0" onAction="#backToWindowOpen" opacity="0.64" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #808080;" text="Back" textFill="WHITE" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="697.0" layoutX="-1.0" layoutY="-1.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="11.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="697.0" layoutX="1165.0" layoutY="-1.0" opacity="0.68" stroke="BLACK" strokeType="INSIDE" width="11.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="-1.0" layoutY="685.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" width="1176.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="-4.0" layoutY="-2.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="1176.0" />
+      <PasswordField fx:id="txtPassword" layoutX="650.0" layoutY="409.0" onAction="#moveToConfirm" prefHeight="30.0" prefWidth="199.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+     </PasswordField>
+      <PasswordField fx:id="txtConfirm" layoutX="870.0" layoutY="409.0" onAction="#confirmMethod" prefHeight="30.0" prefWidth="189.0" promptText="Confirm">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+
+   </children>
+</AnchorPane>

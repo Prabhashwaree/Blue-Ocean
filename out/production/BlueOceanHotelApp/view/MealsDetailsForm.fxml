@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mealsDetailsPane" prefHeight="696.0" prefWidth="1176.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealsDetailsFormController">
+   <children>
+      <ImageView fitHeight="333.0" fitWidth="466.0" layoutX="348.0" layoutY="36.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="105.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1178.0" />
+      <ImageView fitHeight="63.0" fitWidth="87.0" layoutX="62.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="171.0" layoutY="14.0" prefHeight="74.0" prefWidth="384.0" text="Meals Details" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="61.0" />
+         </font>
+      </Label>
+      <Separator layoutX="597.0" layoutY="48.0" prefHeight="4.0" prefWidth="551.0" />
+      <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="21.0" layoutY="121.0" onAction="#openBackToHome" prefHeight="39.0" prefWidth="107.0" style="-fx-background-color: #0000ff;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="1041.0" layoutY="253.0" onAction="#openSaveUpdate" prefHeight="39.0" prefWidth="107.0" style="-fx-background-color: #008000;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="590.0" layoutY="66.0" prefHeight="30.0" prefWidth="278.0" text="Add and Change Meals Details Only Admin " textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtDate" labelFloat="true" layoutX="134.0" layoutY="190.0" onAction="#moveToId" promptText="Date">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="331.0" layoutY="190.0" onAction="#moveToType" prefHeight="25.0" prefWidth="150.0" promptText="Customer Id">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtType" labelFloat="true" layoutX="544.0" layoutY="190.0" onAction="#moveToCount" prefHeight="25.0" prefWidth="150.0" promptText="Meals Type">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtCount" labelFloat="true" layoutX="749.0" layoutY="190.0" onAction="#moveToMeals" prefHeight="25.0" prefWidth="150.0" promptText="Meals Count">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtMeals" labelFloat="true" layoutX="134.0" layoutY="236.0" onAction="#moveToPrize" promptText="Add New Meals">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPrize" labelFloat="true" layoutX="331.0" layoutY="235.0" onAction="#moveToOffer" prefHeight="25.0" prefWidth="150.0" promptText="Meals Prize">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtOffer" labelFloat="true" layoutX="544.0" layoutY="235.0" onAction="#moveToModify" prefHeight="25.0" prefWidth="150.0" promptText="Meals Offer">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <TableView fx:id="tblMealsDetails" layoutY="312.0" prefHeight="657.0" prefWidth="1178.0">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="97.0" text="Date" />
+          <TableColumn fx:id="colId" prefWidth="126.0" text="Customer Id" />
+            <TableColumn fx:id="colType" prefWidth="150.0" text="Meals Type" />
+            <TableColumn fx:id="colCount" prefWidth="97.0" text="Meals Count" />
+            <TableColumn fx:id="colMeals" prefWidth="235.0" text="Add New Meals" />
+            <TableColumn fx:id="colPrize" prefWidth="95.0" text="Meals Prize" />
+            <TableColumn fx:id="colOffer" prefWidth="152.0" text="Meals Offer" />
+            <TableColumn fx:id="colModify" prefWidth="131.0" text="Modify Meal" />
+            <TableColumn fx:id="colDelete" prefWidth="101.0" text="Delete" />
+        </columns>
+      </TableView>
+      <PasswordField fx:id="txtPassword" layoutX="875.0" layoutY="65.0" prefHeight="25.0" prefWidth="236.0" promptText="  Enter Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <JFXTextField fx:id="txtModify" labelFloat="true" layoutX="749.0" layoutY="236.0" prefHeight="25.0" prefWidth="150.0" promptText="Modify Meal">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <ImageView fitHeight="124.0" fitWidth="142.0" layoutX="882.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../===.PNG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5f6265" height="22.0" layoutX="1044.0" layoutY="129.0" rotate="31.0" stroke="BLACK" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#65644e" height="22.0" layoutX="1052.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" width="126.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d154a" height="22.0" layoutX="1043.0" layoutY="191.0" rotate="39.8" stroke="BLACK" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#15293c" height="22.0" layoutX="1052.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" width="126.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f8a" height="22.0" layoutX="1044.0" layoutY="160.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d30e67" height="22.0" layoutX="1052.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" width="126.0" />
+      <Label layoutX="1084.0" layoutY="129.0" prefHeight="22.0" prefWidth="71.0" text="CHINESE" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1084.0" layoutY="191.0" prefHeight="22.0" prefWidth="59.0" text="FRCNCH" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1091.0" layoutY="160.0" prefHeight="22.0" prefWidth="59.0" text="LOCAL" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
